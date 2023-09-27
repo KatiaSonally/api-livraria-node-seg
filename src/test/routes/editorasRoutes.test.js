@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { describe } from '@jest/globals';
+import { describe, expect, it, jest } from '@jest/globals';
 import app from '../../app.js';
 
 let server;
@@ -60,10 +60,14 @@ describe('PUT em /editoras/id', () => {
     ['cidade', { cidade: 'SP' }],
     ['email', { email: 'cdc@cdc.com' }],
   ])('Deve alterar o campo %s', async (chave, param) => {
-    await request(app)
+    const requisição = { request };
+    const spy = jest.spyOn(requisição, 'request');
+    await requisição.request(app)
       .put(`/editoras/${idResposta}`)
       .send(param)
       .expect(204);
+
+    expect(spy).toHaveBeenCalled();
   });
 });
 
