@@ -14,6 +14,8 @@ Livraria com sistema de cadastro e manejo de livros, autores e editoras.
 * `express` v4.18.1,
 * `knex` v2.1.0
 * `sqlite3` v5.0.8
+* `Thunder Client`v2.12.0 
+
 
 
 ## Instalação
@@ -70,18 +72,7 @@ O projeto já conta com uma base de dados configurada e populada com alguns dado
   SQLite version 3.31.1 2020-01-27 19:55:54
   Enter ".help" for usage hints.
   sqlite>
-  ```
-  
-  ### Instalação dos drivers do SQLite (Linux Debian/Ubuntu)
-
-Este projeto utiliza o SQLite como gerenciador de banco de dados SQL. O SQLite utiliza um arquivo, normalmente de extensão `.sqlite` ou `.db`, para guardar os dados.
-
-O projeto já conta com uma base de dados configurada e populada com alguns dados iniciais, localizado na pasta `src/db/livraria.sqlite`. Para utilizar estes dados é necessário ter os drivers do SQLite instalados localmente no computador; você pode seguir os passos abaixo para instalar e acessar os dados: 
-
-* Instalar o `sqlite` globalmente no computador:
-  `sudo apt update`
-  `sudo apt install sqlite3`
-  
+  ```  
 
 ### Instalação dos drivers do SQLite (Windows)
 * Faça o download dos drivers SQLite na página: https://www.sqlite.org/download.html
@@ -102,6 +93,7 @@ O projeto já conta com uma base de dados configurada e populada com alguns dado
 
 
 Depois execute o cmd como administrador e rode o comando ```sqlite3```
+
 
 ### Configuração dos drivers SQLite
 
@@ -177,6 +169,8 @@ Você pode utilizar o CLI do SQLite para fazer consultas ao banco e conferir se 
 
   > Esta API está programada para ser acessada a partir de `http://localhost:3000`. Certifique-se de que não existem outros recursos ocupando a porta `3000` antes de subir o projeto.
 
+  > Melhor visualização com o navegador Mozilla.
+  
 
 ### Endpoints
 
